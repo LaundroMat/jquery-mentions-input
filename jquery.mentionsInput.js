@@ -412,7 +412,7 @@
 
     function doSearchFullNameTrigger(query) {
       query = query.substring(query.lastIndexOf(" ") + 1);
-      var regexp = /[A-Z][a-z]/g;
+      var regexp = /\b[\w]{2}/g;
       var arr = query.match(regexp);
       if(arr) {
         query = query.substring(query.lastIndexOf(arr[arr.length - 1]));
