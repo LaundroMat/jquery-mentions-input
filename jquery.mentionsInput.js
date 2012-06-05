@@ -217,7 +217,7 @@
       var end = currentMessage.substr(currentCaretPosition, currentMessage.length);
       var startEndIndex = (start + value).length;
 
-      var updatedMessageText = start + value + end;
+      var updatedMessageText = start + value + end + ' ';
 
       mentionsCollection.push({
         id    : id,
@@ -236,7 +236,7 @@
 
       // Set correct focus and selection
       elmInputBox.focus();
-      utils.setCaratPosition(elmInputBox[0], startEndIndex);
+      utils.setCaratPosition(elmInputBox[0], startEndIndex + 1);
     }
 
     function getInputBoxValue() {
